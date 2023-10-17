@@ -1,0 +1,36 @@
+﻿@page "/contributions"
+
+@inject IConfiguration Configuration
+
+<PageTitle>Contributions - Md. Jannatul Nayem</PageTitle>
+
+<section class="contributions-section mx-auto" style="width: 80%;">
+
+    <!-- Alpha Science Lab -->
+    <div class="contribution">
+        <h3>Alpha Science Lab</h3>
+        <p>@(new MarkupString(Configuration["Contributions:Asl"]))</p>
+    </div>
+
+    <!-- .NET Dev Community Bangladesh -->
+    <div class="contribution">
+        <h3>.NET Dev Community Bangladesh</h3>
+        <p>@(new MarkupString(Configuration["Contributions:Dotnetdev"]))</p>
+    </div>
+
+    <!-- MEC Computer Club -->
+    <div class="contribution">
+        <h3>MEC Computer Club</h3>
+        <p>@(new MarkupString(Configuration["Contributions:Mec3"]))</p>
+    </div>
+
+   
+
+</section>
+
+<style>
+    .ref {
+        color: dodgerblue;
+        font-weight: bold;
+    }
+</style>

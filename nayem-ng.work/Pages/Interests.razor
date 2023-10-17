@@ -1,5 +1,81 @@
 ﻿@page "/interests"
 
+@inject IConfiguration Configuration
+
 <PageTitle>Interests - Md. Jannatul Nayem</PageTitle>
 
-<h1>Under Development!</h1>
+<div class="interests-section">
+
+    <h2 class="mb-3">// Interests</h2>
+    <div class="col-md-4">
+
+        <div class="interest-card">
+            <h3>
+                <span class="oi oi-transfer" aria-hidden="true"></span>
+                Computer Organization & Architecture - RISC V
+            </h3>
+            <p>@Configuration["Interests:Risc-v"]</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-puzzle-piece" aria-hidden="true"></span>
+                    Machine Learning
+                </h3>
+                <p>@Configuration["Interests:Ml"]</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-globe" aria-hidden="true"></span>
+                    Internet of Things (IoT)
+                </h3>
+                <p>@Configuration["Interests:Iot"]</p>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-flash" aria-hidden="true"></span>
+                    Embedded Systems
+                </h3>
+                <p>@Configuration["Interests:Esd"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-code" aria-hidden="true"></span>
+                    Low-Level Programming
+                </h3>
+                <p>@Configuration["Interests:Llp"]</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-fork" aria-hidden="true"></span>
+                    Chip Design & VLSI
+                </h3>
+                <p>@Configuration["Interests:Vlsi"]</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="interest-card">
+                <h3>
+                    <span class="oi oi-pulse" aria-hidden="true"></span>
+                    Neuromorphic Computing
+                </h3>
+                <p>@Configuration["Interests:NC"]</p>
+            </div>
+        </div>
+    </div>
+</div>
+

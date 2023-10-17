@@ -1,5 +1,41 @@
 ﻿@page "/services"
 
+@inject IConfiguration Configuration
+
 <PageTitle>Services - Md. Jannatul Nayem</PageTitle>
 
-<h1>Under Development!</h1>
+<section id="services">
+    <div class="container">
+        <h2 class="section-title">Cutting-Edge .NET Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="oi oi-code"></i>
+                    </div>
+                    <h3>Custom .NET Development</h3>
+                    <p>@Configuration["Services:Custumdotnet"]</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="oi oi-folder"></i>
+                    </div>
+                    <h3>Database Integration</h3>
+                    <p>@Configuration["Services:Databaseintegration"]</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="oi oi-cloud-download"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>@Configuration["Services:Cloudsolutions"]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
