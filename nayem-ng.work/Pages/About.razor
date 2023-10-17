@@ -1,0 +1,25 @@
+﻿@page "/about"
+
+@inject IConfiguration Configuration
+
+<PageTitle>About - Md. Jannatul Nayem</PageTitle>
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                 <!-- You can include an image of yourself here -->
+                <img src="/myself.png" alt="My Image" class="rounded-circle img-fluid" style="width: 30%;">
+
+                <h2>About Me</h2>
+                <p>@Configuration["About:Description"]</p>
+                <p>@Configuration["About:Expertise"]</p>
+                <p>@Configuration["About:Skills"]</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
