@@ -2,4 +2,64 @@
 
 <PageTitle>Ack - Md. Jannatul Nayem</PageTitle>
 
-<h1>Under Development!</h1>
+<h1>Accomplishments</h1>
+
+@if (ack != null && ack.Any())
+{
+    <div class="d-flex flex-wrap justify-content-between">
+        @foreach (var elem in ack)
+        {
+            <div class="achievement card m-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">@elem.Title</h5>
+                    <p class="card-text">@elem.Description</p>
+                    <p class="card-text">Achieved on: @elem.DateAchieved.ToShortDateString()</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No achievements to display.</p>
+}
+
+@code {
+
+    List<Acknowledgements> ack = new List<Acknowledgements>
+    {
+        new Acknowledgements {
+            Title = "Microsoft Learn Student Ambassador",
+            Description = "Appointed as a Microsoft Learn Student Ambassador to promote technology education and empower fellow students.",
+            DateAchieved = new DateTime(2022, 9, 28) 
+        },
+        new Acknowledgements { 
+            Title = "Divisional Champion | Walton Laptop 3rd National Science Fair", 
+            Description = "Achieved first place for developing an innovative project on IoT based smart farming system.", 
+            DateAchieved = new DateTime(2022, 9, 28) 
+        },
+        new Acknowledgements { 
+            Title = "1st Runners Up | A2I Rocketry Innovation Challenge", 
+            Description = "Secured the 1st runners-up position by designing high-altitude sounding rocket.", 
+            DateAchieved = new DateTime(2023, 1, 18) 
+        },
+        new Acknowledgements { 
+            Title = "Regional Champion | NASA Space Apps Challenge 2022", 
+            Description = "Won the regional championship for developing an interactive environmnt of the James Webb Space Telescope for educators and space enthusiasts.", 
+            DateAchieved = new DateTime(2022, 10, 1) 
+        },
+        new Acknowledgements { 
+            Title = "1st Runners Up | Project Showcasing - ASL BRAINIAC 2022", 
+            Description = "Achieved 1st-runners up position by creating a minimalistic ALU showing enthusiasm for complex digital hardware.", 
+            DateAchieved = new DateTime(2022, 6, 10) 
+        },
+
+    };
+
+    public class Acknowledgements 
+    {
+        public string? Title {get; set;}
+        public string? Description {get; set;}
+        public DateTime DateAchieved {get;set;}
+    }
+}
